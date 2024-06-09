@@ -14,6 +14,11 @@ Route::get('/dashboard', function () {
     return view('pages.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+// Route::get('/logdata', function () {
+//     $data['title'] = 'Log Data';
+//     return view('pages.logdata.temperature');
+// })->middleware(['auth', 'verified'])->name('logdata');
+
 // adalah route yang hanya bisa diakses jika sudah login
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

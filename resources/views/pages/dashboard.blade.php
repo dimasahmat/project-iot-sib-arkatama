@@ -94,8 +94,8 @@
                     <div class="col-md-3">
                         <div class="card text-center h-100">
                             <div class="card-header">
-                                <h6 class="card-title fs-3 fw-bold text-primary">Humidity</h6>
-                                <p class="card-title text-secondary fw-bold">DHT-11</p>
+                                <p class="card-title text-secondary fw-bold">LED 2</p>
+                                <h6 class="card-title fs-3 fw-bold text-success">Green</h6>
                             </div>
                             <div class="card-body d-flex align-items-center justify-content-center">
                                 <button id="greenBtn" class="btn btn-success" onclick="toggleLED('green')">Turn On</button>
@@ -106,8 +106,8 @@
                     <div class="col-md-3">
                         <div class="card text-center h-100">
                             <div class="card-header">
-                                <h6 class="card-title fs-3 fw-bold text-primary">Gas</h6>
-                                <p class="card-title text-secondary fw-bold">MQ-2</p>
+                                <p class="card-title text-secondary fw-bold">LED 3</p>
+                                <h6 class="card-title fs-3 fw-bold text-primary">Blue</h6>
                             </div>
                             <div class="card-body d-flex align-items-center justify-content-center">
                                 <button id="blueBtn" class="btn btn-primary" onclick="toggleLED('blue')">Turn On</button>
@@ -118,8 +118,8 @@
                     <div class="col-md-3">
                         <div class="card text-center h-100">
                             <div class="card-header">
-                                <h6 class="card-title fs-3 fw-bold text-primary">Rain</h6>
-                                <p class="card-title text-secondary fw-bold">Rain sensor</p>
+                                <p class="card-title text-secondary fw-bold">Buzzer</p>
+                                <h6 class="card-title fs-3 fw-bold text-warning">Buzzer</h6>
                             </div>
                             <div class="card-body d-flex align-items-center justify-content-center">
                                 <button id="buzzerBtn" class="btn btn-warning" onclick="toggleBuzzer()">Turn On</button>

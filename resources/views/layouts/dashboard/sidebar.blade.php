@@ -51,24 +51,34 @@
                 <div data-i18n="Dashboard">Dashboard</div>
             </a>
         </li>
-        {{-- <li class="menu-item">
+        <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons mdi mdi-form-select"></i>
-                <div data-i18n="Form Elements">Form Elements</div>
+                <i class="menu-icon tf-icons mdi mdi-history"></i>
+                <div data-i18n="Form Elements">Log Data</div>
             </a>
             <ul class="menu-sub">
                 <li class="menu-item">
-                    <a href="forms-basic-inputs.html" class="menu-link">
-                        <div data-i18n="Basic Inputs">Basic Inputs</div>
+                    <a href="#" class="menu-link">
+                        <div data-i18n="Basic Inputs">Temperature</div>
                     </a>
                 </li>
                 <li class="menu-item">
                     <a href="forms-input-groups.html" class="menu-link">
-                        <div data-i18n="Input groups">Input groups</div>
+                        <div data-i18n="Input groups">Humidity</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="forms-input-groups.html" class="menu-link">
+                        <div data-i18n="Input groups">Gas</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="forms-input-groups.html" class="menu-link">
+                        <div data-i18n="Input groups">Rain</div>
                     </a>
                 </li>
             </ul>
-        </li> --}}
+        </li>
         <li class="menu-item
         @if (request()->url() == route('users.index')) active @endif">
             <a href="{{ route('users.index') }}" class="menu-link">
