@@ -23,33 +23,37 @@
                 @include('layouts.dashboard.header')
                 <!-- / Navbar -->
 
+
                 <!-- Content wrapper -->
                 <div class="content-wrapper">
-
-                    <!-- Content -->
-                    @yield('content')
-                    <!-- / Content -->
-
-                    <div class="content-backdrop fade"></div>
+                    <div class="container-xxl flex-grow-1 container-p-y">
+                        <div class="row gy-4">
+                            <!-- Content -->
+                            @yield('content')
+                            <!-- / Content -->
+                        </div>
+                    </div>
                 </div>
-                <!-- / Content wrapper -->
 
                 <!-- Footer -->
                 @include('layouts.dashboard.footer')
                 <!-- / Footer -->
-            </div>
-            <!-- / Layout page -->
-        </div>
 
-        <!-- Overlay -->
-        <div class="layout-overlay layout-menu-toggle"></div>
+                <div class="content-backdrop fade"></div>
+            </div>
+
+
+        </div>
+        <!-- / Content wrapper -->
+
+    </div>
+    <!-- / Layout page -->
+    </div>
+
+    <!-- Overlay -->
+    <div class="layout-overlay layout-menu-toggle"></div>
     </div>
     <!-- / Layout wrapper -->
-
-    <div class="buy-now">
-        <a href="https://themeselection.com/item/materio-bootstrap-html-admin-template/" target="_blank"
-            class="btn btn-danger btn-buy-now">Upgrade to Pro</a>
-    </div>
 
     <!-- Core JS -->
     @include('layouts.dashboard._foot')
