@@ -28,6 +28,7 @@ Route::group(['as' => 'api.'], function () {
     Route::resource('sensors/rain', RainSensorController::class)
         ->names('sensors.rain');
 
+
     // control
     Route::resource('control/ledred', LedRedController::class)
         ->names('control.ledred');
