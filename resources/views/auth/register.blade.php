@@ -7,7 +7,7 @@
         <div class="app-brand justify-content-center mt-5">
             <a href="/" class="app-brand-link gap-2">
                 <span class="app-brand-logo demo">
-                    <img src="img/logo.png" alt="">
+                    <img src="{{ asset('img/logo.png') }}" alt="">
                 </span>
             </a>
         </div>

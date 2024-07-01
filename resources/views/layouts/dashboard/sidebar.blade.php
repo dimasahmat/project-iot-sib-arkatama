@@ -2,7 +2,7 @@
     <div class="app-brand demo ">
         <a href="{{ route('dashboard') }}" class="app-brand-link">
             <span class="app-brand-logo demo me-1">
-                <img src="img/logo.png" alt="">
+                <img src="{{ asset('img/logo.png') }}" alt="">
             </span>
         </a>
 

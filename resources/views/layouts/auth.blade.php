@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="en" class="light-style layout-wide customizer-hide" dir="ltr" data-theme="theme-default"
-    data-assets-path="../assets/" data-template="vertical-menu-template-free">
+    data-assets-path="{{ asset('assets/') }}" data-template="vertical-menu-template-free">
 
 <head>
     @include('layouts.dashboard._head')
@@ -16,10 +16,10 @@
 
                 @yield('content')
 
-                <img src="../assets/img/illustrations/auth-basic-mask-light.png"
+                <img src="{{ asset('assets/img/illustrations/auth-basic-mask-light.png') }}"
                     class="authentication-image d-none d-lg-block" alt="triangle-bg"
-                    data-app-light-img="illustrations/auth-basic-mask-light.png"
-                    data-app-dark-img="illustrations/auth-basic-mask-dark.png" />
+                    data-app-light-img="{{ asset('assets/img/illustrations/auth-basic-mask-light.png') }}"
+                    data-app-dark-img="{{ asset('assets/img/illustrations/auth-basic-mask-dark.png') }}" />
             </div>
         </div>
     </div>

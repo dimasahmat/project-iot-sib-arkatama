@@ -5,7 +5,7 @@
         <!-- Logo -->
         <div class="app-brand justify-content-center mt-5">
             <a href="/" class="app-brand-link gap-2">
-                <img src="img/logo.png" alt="">
+                <img src="{{ asset('img/logo.png') }}" alt="">
             </a>
         </div>
         <!-- /Logo -->
@@ -39,7 +39,7 @@
                         <input class="form-check-input" type="checkbox" id="remember" />
                         <label class="form-check-label" for="remember"> Remember Me </label>
                     </div>
-                    <a href="auth-forgot-password-basic.html" class="float-end mb-1">
+                    <a href="{{ asset('auth-forgot-password-basic.html') }}" class="float-end mb-1">
                         <span>Forgot Password?</span>
                     </a>
                 </div>
