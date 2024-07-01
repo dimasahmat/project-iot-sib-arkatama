@@ -2,7 +2,7 @@
 <meta name="viewport"
     content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-<title>Dashboard - Analytics | Materio - Bootstrap Material Design Admin Template</title>
+<title>MCHOME</title>
 
 <meta name="description" content="" />
 {{-- Bootstrap --}}
@@ -10,7 +10,7 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
 <!-- Favicon -->
-<link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.ico" />
+<link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.png" />
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
