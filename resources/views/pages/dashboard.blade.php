@@ -6,9 +6,8 @@
         <div class="card">
             <div class="card-header">
                 <div class="d-flex align-items-center justify-content-between">
-                    <h5 class="card-title m-0 me-2 fs-3 fw-bold text-dark">Monitoring</h5>
+                    <h5 class="card-title m-0 me-2 fs-3 fw-bold text-dark">SENSOR</h5>
                 </div>
-                <p class="mt-3"><span class="fw-medium">Total 48.5% growth</span> 😎 this month</p>
             </div>
             <div class="card-body">
                 <div class="row g-4">
@@ -73,7 +72,7 @@
         <div class="card mt-4">
             <div class="card-header">
                 <div class="d-flex align-items-center justify-content-between">
-                    <h5 class="card-title m-0 me-2 fs-3 fw-bold text-dark">Control</h5>
+                    <h5 class="card-title m-0 me-2 fs-3 fw-bold text-dark">ACTUATOR</h5>
                 </div>
             </div>
             <div class="card-body">
@@ -82,183 +81,216 @@
                     <div class="col-md-3">
                         <div class="card text-center h-100">
                             <div class="card-header">
-                                <p class="card-title text-secondary fw-bold">LED 1</p>
-                                <h6 class="card-title fs-3 fw-bold text-danger">Red</h6>
+                                <h6 class="card-title fs-3 fw-bold text-primary">LED 1</h6>
                             </div>
                             <div class="card-body d-flex align-items-center justify-content-center">
-                                <button id="redBtn" class="btn btn-danger" onclick="toggleLED('red')">Turn On</button>
+                                <div id="ledred-icon" class="mdi mdi-lightbulb-off-outline fs-1"></div>
+                            </div>
+                            <div class="card-body d-flex align-items-center justify-content-center">
+                                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                    <input type="radio" class="btn-check" name="ledred" id="ledred0" autocomplete="off"
+                                        onchange="toggleLED('red', 0)">
+                                    <label class="btn btn-outline-primary waves-effect" for="ledred0">OFF</label>
+
+                                    <input type="radio" class="btn-check" name="ledred" id="ledred1" autocomplete="off"
+                                        onchange="toggleLED('red', 1)">
+                                    <label class="btn btn-outline-primary waves-effect" for="ledred1">ON</label>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Humidity Card -->
+                    <!-- Led 2 Green -->
                     <div class="col-md-3">
                         <div class="card text-center h-100">
                             <div class="card-header">
-                                <p class="card-title text-secondary fw-bold">LED 2</p>
-                                <h6 class="card-title fs-3 fw-bold text-success">Green</h6>
+                                <h6 class="card-title fs-3 fw-bold text-primary">LED 2</h6>
                             </div>
                             <div class="card-body d-flex align-items-center justify-content-center">
-                                <button id="greenBtn" class="btn btn-success" onclick="toggleLED('green')">Turn On</button>
+                                <div id="ledgreen-icon" class="mdi mdi-lightbulb-off-outline fs-1"></div>
+                            </div>
+                            <div class="card-body d-flex align-items-center justify-content-center">
+                                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                    <input type="radio" class="btn-check" name="ledgreen" id="ledgreen0"
+                                        autocomplete="off" onchange="toggleLED('green', 0)">
+                                    <label class="btn btn-outline-primary waves-effect" for="ledgreen0">OFF</label>
+
+                                    <input type="radio" class="btn-check" name="ledgreen" id="ledgreen1"
+                                        autocomplete="off" onchange="toggleLED('green', 1)">
+                                    <label class="btn btn-outline-primary waves-effect" for="ledgreen1">ON</label>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Sensor Gas Card -->
+                    <!-- Led 3 Blue -->
                     <div class="col-md-3">
                         <div class="card text-center h-100">
                             <div class="card-header">
-                                <p class="card-title text-secondary fw-bold">LED 3</p>
-                                <h6 class="card-title fs-3 fw-bold text-primary">Blue</h6>
+                                <h6 class="card-title fs-3 fw-bold text-primary">LED 3</h6>
                             </div>
                             <div class="card-body d-flex align-items-center justify-content-center">
-                                <button id="blueBtn" class="btn btn-primary" onclick="toggleLED('blue')">Turn On</button>
+                                <div id="ledblue-icon" class="mdi mdi-lightbulb-off-outline fs-1"></div>
+                            </div>
+                            <div class="card-body d-flex align-items-center justify-content-center">
+                                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                    <input type="radio" class="btn-check" name="ledblue" id="ledblue0"
+                                        autocomplete="off" onchange="toggleLED('blue', 0)">
+                                    <label class="btn btn-outline-primary waves-effect" for="ledblue0">OFF</label>
+
+                                    <input type="radio" class="btn-check" name="ledblue" id="ledblue1"
+                                        autocomplete="off" onchange="toggleLED('blue', 1)">
+                                    <label class="btn btn-outline-primary waves-effect" for="ledblue1">ON</label>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Sensor Hujan Card -->
+                    <!-- Buzzer -->
                     <div class="col-md-3">
                         <div class="card text-center h-100">
                             <div class="card-header">
-                                <p class="card-title text-secondary fw-bold">Buzzer</p>
-                                <h6 class="card-title fs-3 fw-bold text-warning">Buzzer</h6>
+                                <h6 class="card-title fs-3 fw-bold text-primary">Buzzer</h6>
                             </div>
                             <div class="card-body d-flex align-items-center justify-content-center">
-                                <button id="buzzerBtn" class="btn btn-warning" onclick="toggleBuzzer()">Turn On</button>
+                                <div id="buzzer-icon" class="mdi mdi-volume-off fs-1"></div>
+                            </div>
+                            <div class="card-body d-flex align-items-center justify-content-center">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!--/ Control -->
+    </div>
+    <!--/ Control -->
 
-        <script>
-            // function Sensor
-            let previousTemperature = null;
-            let previousHumidity = null;
-            let previousGas = null;
-            let previousRain = null;
+    <script>
+        let previousTemperature = null;
+        let previousHumidity = null;
+        let previousGas = null;
+        let previousRain = null;
+        let previousLedRed = null;
+        let previousLedGreen = null;
+        let previousLedBlue = null;
+        let previousBuzzer = null;
 
-            const temperatureUrl = '{{ route('api.sensors.temperature.index') }}';
-            const humidityUrl = '{{ route('api.sensors.humidity.index') }}';
-            const gasUrl = '{{ route('api.sensors.gas.index') }}';
-            const rainUrl = '{{ route('api.sensors.rain.index') }}';
+        const temperatureUrl = '{{ route('api.sensors.temperature.index') }}';
+        const humidityUrl = '{{ route('api.sensors.humidity.index') }}';
+        const gasUrl = '{{ route('api.sensors.gas.index') }}';
+        const rainUrl = '{{ route('api.sensors.rain.index') }}';
+        const ledRedUrl = '{{ route('api.control.ledred.index') }}';
+        const ledGreenUrl = '{{ route('api.control.ledgreen.index') }}';
+        const ledBlueUrl = '{{ route('api.control.ledblue.index') }}';
+        const buzzerUrl = '{{ route('api.control.buzzer.index') }}';
 
-            async function fetchData(url, elementId, previousValue) {
-                try {
-                    let response = await fetch(url);
-                    let data = await response.json();
+        async function fetchData(url, elementId, previousValue) {
+            try {
+                let response = await fetch(url);
+                let data = await response.json();
 
-                    // Log data for debugging
-                    console.log(`Data from ${elementId}:`, data);
+                if (data.data && Array.isArray(data.data) && data.data.length > 0 && data.data[0].value !== undefined) {
+                    const newValue = data.data[0].value;
 
-                    // Pastikan data adalah array dan ambil nilai dari objek pertama
-                    if (data.data && Array.isArray(data.data) && data.data.length > 0 && data.data[0].value !== undefined) {
-                        const newValue = data.data[0].value;
-
-                        // Bandingkan dengan nilai sebelumnya, jika berbeda perbarui
-                        if (newValue !== previousValue) {
-                            document.getElementById(elementId).innerText = newValue;
-                            return newValue; // Update nilai sebelumnya
-                        }
-                    } else {
-                        document.getElementById(elementId).innerText = 'Data not available';
+                    if (newValue !== previousValue) {
+                        document.getElementById(elementId).innerText = newValue;
+                        return newValue;
                     }
-                } catch (error) {
-                    console.error(`Error fetching ${elementId} data:`, error);
-                    document.getElementById(elementId).innerText = 'Error';
+                } else {
+                    document.getElementById(elementId).innerText = 'Data not available';
                 }
-                return previousValue; // Return nilai sebelumnya jika tidak diperbarui
+            } catch (error) {
+                console.error(`Error fetching ${elementId} data:`, error);
+                document.getElementById(elementId).innerText = 'Error';
+            }
+            return previousValue;
+        }
+
+        async function fetchControlData(url, elementId, previousValue, onClass, offClass) {
+            try {
+                let response = await fetch(url);
+                let data = await response.json();
+
+                if (data.data && Array.isArray(data.data) && data.data.length > 0 && data.data[0].value !== undefined) {
+                    const newValue = data.data[0].value;
+
+                    if (newValue !== previousValue) {
+                        const element = document.getElementById(elementId);
+                        if (newValue == 1) {
+                            element.classList.remove(offClass);
+                            element.classList.add(onClass);
+                            element.classList.add('text-warning');
+                        } else {
+                            element.classList.remove(onClass);
+                            element.classList.add(offClass);
+                            element.classList.remove('text-warning');
+                        }
+                        return newValue;
+                    }
+                } else {
+                    console.error(`Invalid data format for ${elementId}`);
+                }
+            } catch (error) {
+                console.error(`Error fetching ${elementId} data:`, error);
+            }
+            return previousValue;
+        }
+
+        window.onload = function() {
+            updateData();
+            setInterval(updateData, 5000);
+        }
+
+        async function updateData() {
+            previousTemperature = await fetchData(temperatureUrl, 'temperature', previousTemperature);
+            previousHumidity = await fetchData(humidityUrl, 'humidity', previousHumidity);
+            previousGas = await fetchData(gasUrl, 'gas', previousGas);
+            previousRain = await fetchData(rainUrl, 'rain', previousRain);
+            previousLedRed = await fetchControlData(ledRedUrl, 'ledred-icon', previousLedRed, 'mdi-lightbulb-on',
+                'mdi-lightbulb-off-outline');
+            previousLedGreen = await fetchControlData(ledGreenUrl, 'ledgreen-icon', previousLedGreen,
+                'mdi-lightbulb-on', 'mdi-lightbulb-off-outline');
+            previousLedBlue = await fetchControlData(ledBlueUrl, 'ledblue-icon', previousLedBlue, 'mdi-lightbulb-on',
+                'mdi-lightbulb-off-outline');
+            previousBuzzer = await fetchControlData(buzzerUrl, 'buzzer-icon', previousBuzzer, 'mdi-volume-high',
+                'mdi-volume-off');
+
+            const gasElement = document.getElementById('gas');
+            if (previousGas !== null && parseFloat(previousGas) > 299) {
+                gasElement.style.color = 'red';
+            } else {
+                gasElement.style.color = '';
+            }
+        }
+
+        async function toggleLED(color, value) {
+            let url;
+            if (color === 'red') {
+                url = "{{ route('api.control.ledred.store') }}";
+            } else if (color === 'green') {
+                url = "{{ route('api.control.ledgreen.store') }}";
+            } else if (color === 'blue') {
+                url = "{{ route('api.control.ledblue.store') }}";
             }
 
-            window.onload = function() {
+            try {
+                let response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        value
+                    }),
+                });
+
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+
+                let data = await response.json();
+                console.log(data);
                 updateData();
-                setInterval(updateData, 10000); // 10000 ms = 10 seconds
+            } catch (error) {
+                console.error('There was a problem with the fetch operation:', error);
             }
-
-            async function updateData() {
-                previousTemperature = await fetchData(temperatureUrl, 'temperature', previousTemperature);
-                previousHumidity = await fetchData(humidityUrl, 'humidity', previousHumidity);
-                previousGas = await fetchData(gasUrl, 'gas', previousGas);
-                previousRain = await fetchData(rainUrl, 'rain', previousRain);
-
-                // Check if gas value is greater than 300 and change font color accordingly
-                const gasElement = document.getElementById('gas');
-                if (previousGas !== null && parseFloat(previousGas) > 299) {
-                    gasElement.style.color = 'red';
-                } else {
-                    gasElement.style.color = ''; // Reset color if gas value is less than or equal to 300
-                }
-            }
-
-
-            // Function to toggle LED
-            function toggleLED(color, btn) {
-                let url;
-                if (color === 'red') {
-                    url = "{{ route('api.control.ledred.store') }}";
-                } else if (color === 'green') {
-                    url = "{{ route('api.control.ledgreen.store') }}";
-                } else if (color === 'blue') {
-                    url = "{{ route('api.control.ledblue.store') }}";
-                }
-
-                if (btn.innerText === 'Turn On') {
-                    // Call backend API to turn on the LED with specified color
-                    fetch(url, {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json',
-                            },
-                            body: JSON.stringify({
-                                value: 1
-                            }), // Send value 1 (on)
-                        })
-                        .then(response => {
-                            if (!response.ok) {
-                                throw new Error('Network response was not ok');
-                            }
-                            return response.json();
-                        })
-                        .then(data => {
-                            console.log(data);
-                            btn.innerText = 'Turn Off';
-                            btn.classList.remove('btn-' + color);
-                            btn.classList.add('btn-secondary');
-                            btn.style.opacity = "0.5"; // Reduce button opacity
-                            btn.value = '1'; // Set button value to 1 (on)
-                        })
-                        .catch(error => {
-                            console.error('There was a problem with the fetch operation:', error);
-                        });
-                } else {
-                    // Call backend API to turn off the LED with specified color
-                    fetch(url, {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json',
-                            },
-                            body: JSON.stringify({
-                                value: 0
-                            }), // Send value 0 (off)
-                        })
-                        .then(response => {
-                            if (!response.ok) {
-                                throw new Error('Network response was not ok');
-                            }
-                            return response.json();
-                        })
-                        .then(data => {
-                            console.log(data);
-                            btn.innerText = 'Turn On';
-                            btn.classList.remove('btn-secondary');
-                            btn.classList.add('btn-' + color);
-                            btn.style.opacity = "1"; // Restore button opacity
-                            btn.value = '0'; // Set button value to 0 (off)
-                        })
-                        .catch(error => {
-                            console.error('There was a problem with the fetch operation:', error);
-                        });
-                }
-            }
-        </script>
-    @endsection
+        }
+    </script>
+@endsection

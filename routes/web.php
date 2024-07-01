@@ -14,10 +14,10 @@ Route::get('/dashboard', function () {
     return view('pages.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-// Route::get('/logdata', function () {
-//     $data['title'] = 'Log Data';
-//     return view('pages.logdata.temperature');
-// })->middleware(['auth', 'verified'])->name('logdata');
+Route::get('/log', function () {
+    $data['title'] = 'Log Data';
+    return view('pages.log');
+})->middleware(['auth', 'verified'])->name('log');
 
 // adalah route yang hanya bisa diakses jika sudah login
 Route::middleware('auth')->group(function () {

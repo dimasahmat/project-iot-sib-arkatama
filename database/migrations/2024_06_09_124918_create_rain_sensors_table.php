@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('rain_sensors', function (Blueprint $table) {
             $table->id();
-            $table->decimal('value', 8, 2);
+            $table->decimal('value', 8, 0);
             $table->timestamps();
         });
     }

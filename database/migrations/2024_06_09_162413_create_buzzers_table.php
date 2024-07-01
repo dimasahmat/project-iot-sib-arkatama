@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('buzzers', function (Blueprint $table) {
             $table->id();
+            $table->boolean('value')->default(false); // Kolom untuk menyimpan nilai LED (0 atau 1)
             $table->timestamps();
         });
     }
