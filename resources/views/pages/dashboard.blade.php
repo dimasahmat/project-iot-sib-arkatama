@@ -235,7 +235,7 @@
 
         window.onload = function() {
             updateData();
-            setInterval(updateData, 5000);
+            setInterval(updateData, 1000);
         }
 
         async function updateData() {

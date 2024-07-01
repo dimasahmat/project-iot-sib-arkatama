@@ -8,7 +8,6 @@ use App\Http\Controllers\Api\LedGreenController;
 use App\Http\Controllers\Api\LedRedController;
 use App\Http\Controllers\Api\RainSensorController;
 use App\Http\Controllers\Api\TemperatureSensorController;
-use App\Models\Buzzer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 

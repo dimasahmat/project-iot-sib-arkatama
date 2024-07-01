@@ -7,5 +7,9 @@ use Illuminate\Http\Request;
 
 class LogDataController extends Controller
 {
-    //
+    function index()
+    {
+        $data['title'] = 'Log Data';
+        return view('pages.log', $data);
+    }
 }
